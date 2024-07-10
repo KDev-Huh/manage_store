@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>온달력</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      margin-top: 20px;
+    }
+    #calendar-container {
+      width: 800px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+    .header {
+      width: 800px;
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .days {
+      display: flex;
+      background-color: #e9ecef;
+      padding: 10px;
+    }
+    .days div {
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+    }
+    .calendar {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    .calendar li {
+      flex: 1 0 14%;
+      max-width: 12%;
+      height: 90px;
+      margin: 10px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      position: relative;
+    }
+    .calendar li:hover {
+      background-color: #007BFF;
+      color: white;
+      transform: scale(1.1);
+    }
+    .calendar li span.number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-weight: bold;
+      font-size: 12px; /* 글자 크기 줄이기 */
+    }
+    .calendar li span.text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      text-align: center;
+      font-size: 12px; /* 글자 크기 줄이기 */
+    }
+  </style>
+</head>
+<body>  
+  <div id="calendar-container">
+    <div class="header" id="month-year"></div>
+    <div class="days">
+      <div>일</div>
+      <div>월</div>
+      <div>화</div>
+      <div>수</div>
+      <div>목</div>
+      <div>금</div>
+      <div>토</div>
+    </div>
+    <ul class="calendar" id="calendar-days"></ul>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const monthYear = document.getElementById('month-year');
+      const calendarDays = document.getElementById('calendar-days');
+
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth(); // 0부터 시작하는 월 (0: 1월, 1: 2월, ...)
+      
+      const monthNames = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
+      monthYear.textContent = `${year}년 ${monthNames[month]}`;
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+
+      let days = '';
+
+      for (let i = 0; i < firstDay; i++) {
+        days += `<li></li>`;
+      }
+
+      for (let i = 1; i <= lastDate; i++) {
+        days += `<li><span class="number">${i}</span><span class="text"></span></li>`;
+      }
+
+      calendarDays.innerHTML = days;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+    <!-- <script src="js/list.js"></script> -->
+    <div id="container">
+        <div id="NowDate"></div>
+        <div id="DaysOf">
+            <div class="DayOf">일</div>
+            <div class="DayOf">월</div>
+            <div class="DayOf">화</div>
+            <div class="DayOf">수</div>
+            <div class="DayOf">목</div>
+            <div class="DayOf">금</div>
+            <div class="DayOf">토</div>
+        </div>
+        <div class="days"></div>
+    </div>
+    <script>
+        let days = document.querySelector('.days');
+        let viewNow = document.getElementById('NowDate');
+        let list = '';
+        let Now = '';
+        let now = new Date(); 
+        const week = ['일', '월', '화', '수', '목', '금', '토'];
+
+        //다음달 이전달 보기
+        let lastMonth = document.querySelector('.lastMonth');
+        let nextMonth = document.querySelector('.nextMonth');
+
+        //현재 상태 받기
+        let Now_Year = now.getFullYear();
+        let Now_Month = now.getMonth()+1;
+        let Now_Date = now.getDate();
+        let last = new Date(Now_Year, Now_Month, 0);
+        last.getDate();
+
+        function innerNow(){
+            Now+=`<span class="lastMonth"><</span>${Now_Year}년 ${Now_Month}월<span class="nextMonth">></span>`;
+            viewNow.innerHTML=(Now);
+        }
+
+        function intolist(){
+            // getDayOfWeek(`${Now_Year}-${Now_Month}-0`);
+            // for(let i=0;i<last.getDate();i++)
+            // {
+                
+            // }
+            for(let i=0;i<35;i++)
+            {
+                list+="<div></div>";
+            }
+            days.innerHTML=(list);
+        }
+
+        //이전 클릭하면 이전으로 이동
+        // lastMonth.addEventListener("click", function(){
+
+        // });
+
+        innerNow();
+        intolist();
+    </script>
+</body>
+</html>

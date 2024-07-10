@@ -1,0 +1,42 @@
+nav{
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 101.5%;
+    height: 50px;
+    background-color: #FD0;
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a{
+    color: #FFF;
+    text-shadow: 
+        -0.5px -0.5px 0 #000,  
+        0.5px -0.5px 0 #000,
+        -0.5px  0.5px 0 #000,
+        0.5px  0.5px 0 #000; /* 테두리 색상 */
+    font-size: 22px;
+    font-weight : 500;
+    margin-top: 14px;
+    margin-right: 10px;
+    text-decoration-line: none;
+}
+.travel{
+    font-size: 33px;
+    letter-spacing : 10px;
+    font-weight : 700;
+}
+.logout{
+    font-size: 15px;
+}
+svg{
+    width: 10px;
+    margin-right: 3px;
+}
+.logout_a{
+    /* background-color: aqua; */
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
