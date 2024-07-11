@@ -4,89 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/misson.css">
+    <link rel="stylesheet" href="css/mission.css">
     <link rel="stylesheet" href="../css/nav.css">
-    <style>
-        .mission_box{
-            margin: 0 auto;
-            height: auto;
-            width: 850px;
-            border: solid 1px black;
-        }
-        .mission_box h1{
-            margin-left: 40px;
-            margin-top: 35px;
-        }
-        #select{
-            margin: 0 auto;
-            width: 650px;
-            margin-bottom: 50px;
-        }
-        .mission_section{
-            margin-bottom: 10px;
-        }
-        .id{
-            font-size: 20px;
-            font-weight: 1000;
-            margin-right: 15px;
-        }
-        .mission_work{
-            font-weight: bold;
-            margin-right: 15px;
-        }
-        #doit{
-            border: solid 1px black;
-            width: 10px;
-            height: 10px;
-            display:inline-block;
-            margin-right: 15px;
-        }
-        .details{
-            display: none;
-            padding-top: 10px;
-            width: 600px;
-            margin: 0 auto;
-            /* border: solid 1px black;*/ /*div 크기 확인 하기 위해*/  
-        }
-        .detailBut{
-            cursor: pointer;
-        }
-        hr{
-            width: 750px;
-        }
-        #sub{
-            background-color: white;
-            font-size: 25px;
-            border: none;
-            cursor: pointer;
-        }
-        #add{
-            margin: 0 auto;
-            width: 650px;
-            margin-bottom: 50px;
-        }
-        #addbox{
-            display: inline-block;
-            width: 500px;
-        }
-        #addText{
-            width: 575px;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-        #moreAddText{
-            width: 575px;
-            padding: 10px;
-            height: 250px;
-            margin-left: 32px;
-        }
-        img{
-            display: none;
-            width: 20px;
-            margin-left: -28px;
-            margin-right: 10px;
-        }
-    </style>
 </head> 
 <body>
     <nav>
@@ -94,7 +13,7 @@
         <a href="../notification.html" style="margin-left: -50px;"><span class="notification">공지사항</span></a>
         <a href="../open/open.php"><span class="open">오픈</span></a>
         <a href="mission.php"><span class="mission">오늘의 미션</span></a>
-        <a href=""><span class="close">마감</span></a>
+        <a href="../close/close.php"><span class="close">마감</span></a>
         <a href=""><span class="significant">특이사항</span></a>
         <a href="../../login.html" class="logout_a">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">

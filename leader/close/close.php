@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/open.css">
+    <link rel="stylesheet" href="css/close.css">
     <link rel="stylesheet" href="../css/nav.css">
 </head> 
 <body>
     <nav>
         <a href=""  style="margin-top: 5px;"><span class="travel">여행길</span></a>
         <a href="../notification.html" style="margin-left: -50px;"><span class="notification">공지사항</span></a>
-        <a href="open.php"><span class="open">오픈</span></a>
+        <a href="../open/open.php"><span class="open">오픈</span></a>
         <a href="../mission/mission.php"><span class="mission">오늘의 미션</span></a>
-        <a href="../close/close.php"><span class="close">마감</span></a>
+        <a href="close.php"><span class="close">마감</span></a>
         <a href=""><span class="significant">특이사항</span></a>
         <a href="../../login.html" class="logout_a">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -22,8 +22,8 @@
         <span class="logout">로그아웃</span>
         </a>
     </nav>
-    <div class="open_box">
-        <h1>오픈준비</h1>
+    <div class="close_box">
+        <h1>마감</h1>
         <div id="select">
             <?php 
                 $conn = mysqli_connect('localhost', 'root', '', 'manage_store');
@@ -32,14 +32,14 @@
                     exit();
                 }
             
-                $query = "select id, open_work, doit, detail from open;";
+                $query = "select id, close_work, doit, detail from close;";
                 $result = mysqli_query($conn, $query);
                 $count = mysqli_num_rows($result); //튜플 갯수
                 for($i = 0 ; $i < $count ; $i+=1)
                 {
                     $row = mysqli_fetch_assoc($result);
-                    echo "<div class='open_section'><span class='id'>".$row['id'].".</span>
-                    <span class='open_work'>".$row['open_work']."</span>
+                    echo "<div class='close_section'><span class='id'>".$row['id'].".</span>
+                    <span class='close_work'>".$row['close_work']."</span>
                     <div id='doit'></div><img src='../image/체크문자.png' alt='체크' id='check".$row['id']."'>
                     <span class='detailBut' onclick='ShowDetail(".$row['id'].")'>세부사항</span>
                     <div class='details' id='detail".$row['id']."'>".$row['detail']."</div></div>
@@ -52,7 +52,7 @@
         <hr>
         <h1>추가</h1>
         <div id="add">
-            <form action="open_post.php" method="post">
+            <form action="close_post.php" method="post">
                 <input type="submit" value="+" id="sub">
                 <input type="text" name="addText" placeholder="텍스트입력" id="addText"><br>
                 <textarea name="moreText" placeholder="세부입력" id="moreAddText"></textarea>
