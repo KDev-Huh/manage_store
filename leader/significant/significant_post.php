@@ -4,10 +4,10 @@
         echo "MYSQL 접속 실패".mysqli_connect_errno();
         exit();
     }
-    $query = "update significant set answer='".$_POST['answer']."' where id=1;";
+    $query = "update significant set answer='".$_POST['answer']."' where time='".$_POST['time']."';";
     $result = mysqli_query($conn, $query);
     if($result){
         echo "<script>alert('답변 전송 성공')</script>";
-        echo "<script>location.href='significant.php'</script>";
+        echo "<script>location.href='significant_time.html'</script>";
     }
 ?>

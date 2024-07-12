@@ -39,6 +39,7 @@
             <div id='respond_box'>
                 <form action='significant_post.php' method='post'>
                     <textarea name='answer' id='respond'>".$row['answer']."</textarea>
+                    <input type='hidden' name='time' value='".$_POST['time']."'>
                     <input type='submit' value='확인'>
                 </form>
             </div>";
