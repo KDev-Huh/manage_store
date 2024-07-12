@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="significant.php" name="frm" method="post">
+        <label for="time"></label>
+        <input type="hidden" value="0" name="time" id="time">
+    </form>
+    <script>
+        let today = new Date();
+        
+        let year = today.getFullYear();
+        let month = ('0' + (today.getMonth() + 1)).slice(-2);
+        let day = ('0' + today.getDate()).slice(-2);
+
+        let dateString = year + '-' + month  + '-' + day;
+        
+        frm.time.value = dateString;
+        document.forms['frm'].submit();
+    </script>
+</body>
+</html>
