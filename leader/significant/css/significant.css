@@ -1,8 +1,107 @@
+.work{
+    width: 130px;
+    /* background-color: aqua; */
+    margin-left: 180px;
+    float: left;
+    margin-top: 70px;
+}
+.work_text{
+    font-size: 17px;
+    font-weight: 700;
+}
+#check1{
+    margin-top: 5px;
+}
+.check{
+    width: 5px;
+    height: 15px;
+    border: 0.4px solid white;
+    background-color: white;
+    display: inline-block;
+    /*
+    background-color: #FD0;
+    border: solid 0.4px black;
+    */
+}
+.work a{
+    color: #6D6D6D;    /*color: #000;*/
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration-line: none;
+    margin-right: 10px;
+}
+
+.work #open,#mission,#close{
+    color: #6D6D6D;
+    font-size: 13px;
+    font-weight: 700;
+}
+.navs{
+    margin-top: 6px;
+}
+
+#check5 div{
+    background-color: #FD0;
+    border: solid 0.4px black;
+}
+#check5 a{
+    color: #000;
+}
+aside{
+    float: right;
+}
+#imgbox{
+    width: 200px;
+    height: 200px;
+    margin-left: 35px;
+    margin-top: 45px;
+}
+#imgbox img{
+    width: 100%;
+    opacity: 0.9;
+}
+#today{
+    border: solid 0.4px #000;
+    border-radius: 10px;
+    height: 200px;
+    width: 220px;
+    /* background-color: aqua; */
+    margin-right: 45px;
+    margin-top: 70px;
+    padding: 20px;
+}
+.EnToday{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 1000;
+}
+.today li{
+    list-style: none;
+    margin-left: -20px;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.money{
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.employees{
+    margin-left: 3px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.emps{
+    margin-left: 11px;
+    margin-top: 3px;
+    color: #8C8C8C;
+}
+/* 여기까지 사이드 바*/
 #significant_box{
     margin: 0 auto;
     height: auto;
     width: 850px;
-    border: solid 1px black;
 }
 #significant_box h1{
     margin-left: 40px;
@@ -10,11 +109,12 @@
 }
 .significant_section{
     margin: 0 auto;
+    background-color: #F0ECEC;
+    border-radius: 10px;
     width: 650px;
     padding: 10px;
     min-height: 200px;
     margin-bottom: 50px;
-    border: 1px solid black;
 }
 hr{
     width: 750px;
@@ -28,18 +128,19 @@ hr{
     width: 650px;
     min-height: 200px;
     padding: 10px;
+    border: none;
+    background-color: #F0ECEC;
+    border-radius: 10px;
 }
 input{
     margin-top: 10px;
     float: right;
     width: 40px;
     text-align: center;
-    background-color: #FD0;
-    border: solid 0.5px black;
-    color: white;
-    text-shadow: 
-    -0.5px -0.5px 0 #000,  
-    0.5px -0.5px 0 #000,
-    -0.5px  0.5px 0 #000,
-    0.5px  0.5px 0 #000; /* 테두리 색상 */
-    }
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 10px;
+}

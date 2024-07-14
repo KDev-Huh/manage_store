@@ -12,7 +12,7 @@
 
     if($row['member_id']==$_POST['member_id'] && $row['member_password']==$_POST['member_password']){
         if($row['rank']==1)
-            echo "<script>location.href='leader/notification.html'</script>";
+            echo "<script>location.href='leader/notification.php'</script>";
         else
             echo "<script>location.href='employee/employee.php'</script>";
     }
