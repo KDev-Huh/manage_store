@@ -316,7 +316,7 @@
                         $row = mysqli_fetch_assoc($result);
                         echo "<div class='mission_section'><span class='id'>".$row['id'].".</span>
                         <span class='mission_work'>".$row['mission_work']."</span>
-                        <div id='doit'></div><img class='checkimg' src='../image/체크문자.png' alt='체크' id='checkimg".$row['id']."'>
+                        <div id='doit'></div><img class='checkimg' src='../image/check.png' alt='체크' id='checkimg".$row['id']."'>
                         <span class='detailBut' onclick='ShowDetail(".$row['id'].")'>세부사항</span>
                         <div class='details' id='detail".$row['id']."'>".$row['detail']."</div></div>
                         ";
