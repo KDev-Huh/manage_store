@@ -174,7 +174,7 @@
             if($row){
                 echo "<h1>특이사항 보기</h1><p>".$row['receive']."</p>";
                 if($row['answer'])
-                    echo "<h4>특이사항 보기</h4><p>".$row['answer']."</p>";
+                    echo "<h4>답변</h4><p>".$row['answer']."</p>";
             }
         ?>  
     </div>
