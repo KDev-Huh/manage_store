@@ -342,7 +342,7 @@
                 exit();
             }
             $today = date("Y-m-d");
-            $query = "select goal_price from today_goal where time='".$today."';";
+            $query = "select goal_price from today_goal where time = (select max(time) from today_goal where time like '".$time."%');";
             $result1 = mysqli_query($conn, $query);
             $row1 = mysqli_fetch_assoc($result1);
             if($row1['goal_price']==null)
@@ -358,7 +358,7 @@
                 exit();
             }
             $today = date("Y-m-d");
-            $query = "select now_price from today_goal where time='".$today."';";
+            $query = "select now_price from today_goal where time = (select max(time) from today_goal where time like '".$time."%');";
             $result1 = mysqli_query($conn, $query);
             $row1 = mysqli_fetch_assoc($result1);
             if($row1['now_price']==null)

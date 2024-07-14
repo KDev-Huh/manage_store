@@ -9,7 +9,7 @@
     $result = mysqli_query($conn, $query);
     if($result) {
         echo "<script>alert('데이터 삽입 성공!!!');</script>";
-        echo '<script>location.href="../employee/employee.php?time='.$_POST['NowTime'].'";</script>';
+        echo '<script>location.href="notification.php";</script>';
     }
     else{
         echo "<script>alert('데이터 삽입 실패!!!');</script>";
