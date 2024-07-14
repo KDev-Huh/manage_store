@@ -215,7 +215,7 @@
 <body>
     <nav>
         <div class="board">
-            <a href="https://www.instagram.com/yeohaenggil_souvenir_shop"  style="margin-top: 5px;"><div class="logo"><img src="../image/메인_로고-배경제거.png"></div></a>
+            <a href="https://www.instagram.com/yeohaenggil_souvenir_shop"  style="margin-top: 5px;"><div class="logo"><img src="../image/main_logo.png"></div></a>
             <a href="notification.php" style="margin-left: -50px;"><span class="notification">공지사항</span></a>
             <a href="open/open.php"><span class="open">오픈</span></a>
             <a href="mission/mission.php"><span class="mission">오늘의 미션</span></a>
@@ -264,7 +264,7 @@
                 <span class="EnToday">1호점 지킴이</span>
                 <div id="emps"></div>
             </div>
-            <div id="imgbox"><img src="../image/메인_로고-배경제거.png"></div>
+            <div id="imgbox"><img src="../image/main_logo.png"></div>
         </aside>
         
         <div class="notification_box">
